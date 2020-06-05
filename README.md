@@ -21,3 +21,28 @@
 ![j4](images/j4.jpeg)
 
 ![j2](images/j2.jpeg)
+
+## 好习惯
+
+```bash
+# 初始化这个项目
+go mod init github.com/liweilijie/yidai
+# 在github上面创建仓库，并且在本地增加到github远程名称上面，进行双推
+git remote add github git@github.com:liweilijie/yidai.git
+git push -u github master
+
+# 创建一个tag
+git tag -a v2.0.0 -m "first go mod init"
+# 推送tags
+git push origin --tags
+git push github --tags
+
+# 双推代码
+git push origin master
+git push github master
+
+# 创建一个develop分支进行开发
+git checkout -b develop
+git push -u origin develop
+git push -u github develop
+```
